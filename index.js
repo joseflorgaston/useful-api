@@ -17,7 +17,7 @@ app.use(cors());
 
 // Require & Import API routes
 const termsAndConditions = require('./routes/mowi/onboarding/termsAndConditions.route');
-const sendEmail = require('./routes/portfolio/sendEmail.route');
+const sendEmail = require('./routes/portfolio/SendEmail.route');
 
 // Use API Routes
 app.use('/api', sendEmail);
