@@ -5,7 +5,7 @@ const router = Router()
 // Initialize Controller
 const {
   getTermsAndConditions,
-} = require('../../../controllers/mowi/onboarding/termsAndConditions.controller')
+} = require('../../../controllers/mowi/onboarding/TermsAndConditions.controller')
 
 // Get All
 router.get('/basescondiciones', getTermsAndConditions)

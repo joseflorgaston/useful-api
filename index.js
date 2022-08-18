@@ -16,13 +16,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 // Require & Import API routes
-const termsAndConditions = require('./routes/mowi/onboarding/termsAndConditions.route');
+const termsAndConditions = require('./routes/mowi/onboarding/TermsAndConditions.route');
+const sendEmail = require('./routes/portfolio/SendEmail.route');
 
 // Use API Routes
-// console.log(termsAndConditions.stack);
-
+app.use('/api', sendEmail);
 app.use('/api', termsAndConditions);
 
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
-})
+});
