@@ -17,7 +17,7 @@ module.exports = {
             from: req.body.email,
             to: req.body.to,
             subject: req.body.subject,
-            text: req.body.message
+            text: req.body.message + "\n" + req.body.email
         };
 
         transporter.sendMail(mailOptions, function (error, info) {
