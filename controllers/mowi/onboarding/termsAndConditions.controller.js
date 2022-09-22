@@ -11,5 +11,17 @@ module.exports = {
         };
         await new Promise(resolve => setTimeout(resolve, 2000));
         res.status(200).json(basesYCondiciones);
+    },
+    async get403StatusCode(req, res) {
+        res.status(403).json("Forbidden");
+    },
+    async get401StatusCode(req, res) {
+        res.status(401).json("Unauthorized");
+    },
+    async get400StatusCode(req, res) {
+        res.status(400).json("Bad Request");
+    },
+    async get500StatusCode(req, res) {
+        res.status(500).json("Internal Server Error");
     }
 }
